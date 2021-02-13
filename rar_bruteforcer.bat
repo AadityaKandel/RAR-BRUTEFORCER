@@ -76,6 +76,8 @@ goto bruteforce
 :cracked
 color f
 cls
+echo APP BY AK HACKS OR TRICKS
+echo.
 echo            ..........
 echo            .  INFO  .
 echo            ..........
@@ -87,6 +89,7 @@ echo PASSKEY: %fh%
 echo.
 echo THANK YOU VERY MUCH FOR USING OUR PROGRAM
 echo.
+echo VISIT: https://www.youtube.com/channel/UCkHev_YE9O3LmMFDZrxgt5g
 pause
 del UnRAR.exe
 exit
