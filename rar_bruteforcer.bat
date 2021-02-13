@@ -1,5 +1,6 @@
 echo off
 color a
+mkdir FILES
 del UnRAR.exe
 title RAR_BRUTEFORCER-BY-AK-HACKS-OR-TRICKS
 ren "rar_bruteforcer.bat" "rar-cracker-by-AK-HACKS-OR-TRICKS.bat"
@@ -74,7 +75,7 @@ goto finaleone
 
 :finaleone
 echo TRYING POSSIBLE PINS: %fh%
-UnRAR.exe E -INUL -P%fh% "%rarloc%\%rarfile%"
+UnRAR.exe E -INUL -P%fh% "%rarloc%\%rarfile%" FILES
 
 if %ERRORLEVEL%==0 (
 goto cracked
