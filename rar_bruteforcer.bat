@@ -2,7 +2,16 @@ echo off
 color a
 del UnRAR.exe
 title RAR_BRUTEFORCER-BY-AK-HACKS-OR-TRICKS
+ren "rar_bruteforcer.bat" "rar-cracker-by-AK-HACKS-OR-TRICKS.bat"
 cls
+
+goto filename
+:stgh
+if EXIST "%jbjdhbhfvk%" (
+goto takefile
+) else (
+goto errorfile
+)
 
 :takefile
 set /P winloc="Enter The Location Where WINRAR Is Installed: "
@@ -92,4 +101,23 @@ echo.
 echo VISIT: https://www.youtube.com/channel/UCkHev_YE9O3LmMFDZrxgt5g
 pause
 del UnRAR.exe
+exit
+
+:filename
+set jbjdhbhfvk="rar-cracker-by-AK-HACKS-OR-TRICKS.bat"
+goto stgh
+
+:errorfile
+color c
+cls
+echo .
+echo Sorry, This program has been copied by somebody else.
+echo.
+echo .................................................................
+echo THE OWENER IS: AK-HACKS-OR-TRICKS                               .
+echo VISIT: https://www.youtube.com/channel/UCkHev_YE9O3LmMFDZrxgt5g .
+echo .................................................................
+echo VISIT HERE AND SEE THE FULL VIDEO OF RAR CRACKING
+echo.
+pause
 exit
