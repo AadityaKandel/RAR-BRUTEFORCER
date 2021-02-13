@@ -43,7 +43,7 @@ exit
 
 :brutestart
 set /P rarloc="ENTER THE FOLDER LOCATION OF YOUR RAR FILE: "
-copy "%winloc%\UnRAR.exe" "%rarloc%"
+copy "%winloc%\UnRAR.exe"
 cls
 goto brutestarts
 
