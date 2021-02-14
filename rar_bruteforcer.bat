@@ -53,6 +53,10 @@ echo Your WINRAR INSTALLED LOCATION: %winloc%
 echo Your RAR FILE'S FOLDER LOCATION: %rarloc%
 echo.
 set /P rarfile="ENTER THE NAME OF YOUR RAR FILE: "
+echo.
+echo GUESS AND ENTER THE LENGTH OF RAR PIN [ R=RANDOM_ATTACK ]
+choice /C 123456789R
+goto errorcheck
 
 if EXIST "%rarloc%\%rarfile%" (
 goto bruteforce
@@ -67,7 +71,6 @@ echo PLEASE ENTER YOUR RAR FILE NAME AGAIN WITH EXTENSION
 echo.
 goto brutestarts
 
-set /A onepin=0
 :bruteforce
 set /A fh=%onepin%+1
 set /A onepin=%fh%
@@ -122,3 +125,52 @@ echo VISIT HERE AND SEE THE FULL VIDEO OF RAR CRACKING
 echo.
 pause
 exit
+
+rem ERROR CHECKER
+
+:errorcheck
+if %ERRORLEVEL%==1 (
+set /A onepin=0
+goto bruteforce
+)
+if %ERRORLEVEL%==2 (
+set /A onepin=10
+goto bruteforce
+)
+if %ERRORLEVEL%==3 (
+set /A onepin=100
+goto bruteforce
+)
+if %ERRORLEVEL%==4 (
+set /A onepin=1000
+goto bruteforce
+)
+if %ERRORLEVEL%==5 (
+set /A onepin=10000
+goto bruteforce
+)
+if %ERRORLEVEL%==6 (
+set /A onepin=100000
+goto bruteforce
+)
+if %ERRORLEVEL%==7 (
+set /A onepin=1000000
+goto bruteforce
+)
+if %ERRORLEVEL%==8 (
+set /A onepin=10000000
+goto bruteforce
+)
+if %ERRORLEVEL%==9 (
+set /A onepin=100000000
+goto bruteforce
+)
+if %ERRORLEVEL%==10 (
+goto bruternd
+)
+
+REM RANDOM GENERATOR
+:bruternd
+set /A onepin=%RANDOM%
+set /A fh=%onepin%
+goto finaleone
